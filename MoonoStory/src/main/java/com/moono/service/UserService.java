@@ -33,4 +33,11 @@ public class UserService {
     public UserDTO findUserById(String id) {
         return userMapper.findUserById(id);
     }
+    
+ // 미션 상태 업데이트 서비스
+    public void updateMissionStatus(UserDTO user) {
+        userMapper.updateMissionStatus(user);
+    }
+    
+    
 }

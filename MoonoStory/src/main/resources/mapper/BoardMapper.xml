@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.moono.mapper.BoardMapper">
+	 <!-- 게시물 생성  -->
+    <insert id="insertBoard">
+        INSERT INTO board (title, content, userId, createdAt, updatedAt)
+        VALUES (#{title}, #{content}, #{userId}, NOW(), NOW())
+    </insert>
+
+</mapper>
